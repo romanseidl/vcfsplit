@@ -2,7 +2,10 @@
 
 This little Java program splits a VCF file consisting of multiple vcards into single VCF files. This is particualry useful if you want to import a vcf into Microsoft Outlook.
 
-It ist a executable jar file, so starting it with 
+To download the binary verison go to 
+https://sourceforge.net/projects/vcf-split/files/vcfsplit.jar/download
+
+This is a executable jar file, so starting it with 
 
     java -jar vcfsplitter.jar  
 
