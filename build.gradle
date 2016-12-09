@@ -1,0 +1,30 @@
+group 'at.granul'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'gradle-one-jar'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.github.rholder:gradle-one-jar:1.0.4'
+    }
+}
+
+dependencies {
+    compile 'org.codehaus.mojo:ideauidesigner-maven-plugin:1.0-beta-1'
+}
+
+task runnableJar(type: OneJar) {
+    mainClass = "at.granul.vcfsplit.VcfSplitter"
+    archiveName = 'vcfsplit.jar'
+}
